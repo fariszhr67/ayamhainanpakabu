@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.fronttitle{
+    text-align: center;
+    color:yellow;
+}
+
+.fronttitle .welcome{
+    font-family:sans-serif;
+    font-size: 50px;
+}
+
+.fronttitle .stallname {
+    font-family:sans-serif;
+    font-size: 15px;
+}
+
+.frontpage{
+    background-color: green;
+}
+
+.frontpage .container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.box {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid black;
+}
+
+footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
