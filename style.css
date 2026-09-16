@@ -2,8 +2,86 @@
     box-sizing: border-box;
 }
 
-/* ni index html*/
-.frontpage{
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f4;
+}
+
+header {
+    padding: 60px;
+    text-align: center;
+    background: rgb(70, 63, 179);
+    color: white;
+}
+
+.navbar {
+  display: flex;
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 14px 20px;
+  margin-bottom: 30px;
+}
+
+.navbar .page {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .page a {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar .page a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.cart {
+    position: relative;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 12px;
+    background-color: red;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1d1d1d;
+    color: white;
+    margin-top: 40px;
+}
+
+/* index html */
+.frontpage {
     background-color: gray;
     min-height: 100vh;
     margin: 0;
@@ -49,12 +127,31 @@
     color: black;
 }
 
-.frontpage .container .box a{
-    text-decoration:none;
-    color:black;
+.frontpage .container .box a {
+    text-decoration: none;
+    color: black;
 }
 
-/*ni login.php*/
+/* homepage */
+.mainmenu {
+    display: grid;
+    grid-template-columns: repeat(1, 600px);
+    justify-content: center;
+    gap: 30px;
+}
+
+.mainmenu .mainpage {
+    border: 3px solid black;
+    border-radius: 4px;
+}
+
+.mainmenu .mainpage .homeimg {
+    object-fit: cover;
+    width: 595px;
+    height: 400px;
+}
+
+/* login page */
 .loginpage {
     background-color: gray;
     text-align: center;
@@ -72,7 +169,7 @@
     background-color: white;
     padding: 20px;
     width: fit-content;
-    border:3px solid black;
+    border: 3px solid black;
     border-radius: 8px;
 }
 
@@ -86,155 +183,194 @@
     border-radius: 8px;
 }
 
-.loginpage .container .box1{
+.loginpage .container .box1 {
     background-color: rgb(13, 177, 13);
-    width:fit-content;
-    height:fit-content;
-    border:2px solid gray;
-    border-radius:8px;
-    float:right;
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid gray;
+    border-radius: 8px;
+    float: right;
 }
 
-.loginpage .container .box2{
+.loginpage .container .box2 {
    background-color: rgb(232, 18, 18);
-    width:fit-content;
-    height:fit-content;
+    width: fit-content;
+    height: fit-content;
     text-decoration: none;
     color: black;
-    border:2px solid gray;
-    border-radius:8px; 
-    float:left;
+    border: 2px solid gray;
+    border-radius: 8px;
+    float: left;
 }
 
-/*ni homepage*/
-body {
-  font-family: Arial;
-  margin: 0;
-}
-
-header{
-    padding: 60px;
-    text-align: center;
-    background: rgb(70, 63, 179);
-    color: white;
-}
-
-
-.navbar {
-  display: flex;
-    background-color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  justify-content: space-between;
-  color: white;
-  padding: 14px 20px;
-  margin-bottom: 30px;
-}
-
-.navbar .page {
-    display: flex;
-    align-items: center;
-}
-
-.navbar .page a {
-  color: white;
-    display: inline-flex;
-    align-items: center;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-
-.navbar .page a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.cart {
-    position: relative;
-    background-color: white;
-    color: black;
-    font-size: 25px;
-    padding: 5px;
-    border-radius: 5px;
-}
-
-.cart-count{
-    position:absolute;
-    top:-8px; 
-    right:-8px;
-    font-size: 12px;
-    background-color:red;
-    color:white;
-    padding:2px 5px;
-    border-radius:5px;
-}
-
-.shop{
+/* menu pages */
+.shop {
     display: grid;
-    grid-template-columns: repeat(4,223px);
-    gap:30px;
+    grid-template-columns: repeat(4, 223px);
+    gap: 30px;
     justify-content: center;
 }
 
-@media (max-width:1000px) {
-   .shop{
-    grid-template-columns: repeat(2,223px);
+@media (max-width: 1000px) {
+   .shop {
+    grid-template-columns: repeat(2, 223px);
    }
 }
 
-@media (max-width:500px) {
-   .shop{
-    grid-template-columns: repeat(1,223px);
+@media (max-width: 500px) {
+   .shop {
+    grid-template-columns: repeat(1, 223px);
    }
 }
 
-.shop .item{
+.shop .item {
     border: 2px solid black;
     border-radius: 4px;
+    background: white;
 }
 
-.shop .item img{
+.shop .item img {
     object-fit: cover;
     width: 220px;
     height: 220px;
 }
 
-.shop .item .details{
+.shop .item .details {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    gap:4px;
+    gap: 4px;
 }
 
 .shop .item .details h3,
-.shop .item .details p{
+.shop .item .details p {
     margin: 0;
 }
 
-.shop .item .details .price-quantity{
+.shop .item .details .price-quantity {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.shop .item .details .price-quantity .buttons{
+.shop .item .details .price-quantity .buttons {
     display: flex;
     gap: 5px;
     font-style: 16px;
 }
 
-.bi-dash-lg{
-    color:red;
+.bi-dash-lg {
+    color: red;
 }
 
-.bi-plus-lg{
-    color:green;
+.bi-plus-lg {
+    color: green;
 }
 
-footer{
+/* admin dashboard */
+.admin-page {
+    background: #f5f5f5;
+}
+
+.admin-content {
+    width: min(1200px, 92%);
+    margin: 30px auto;
+}
+
+.admin-card {
+    background: #ffffff;
+    border: 1px solid #d9d9d9;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    padding: 24px;
+}
+
+.admin-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 12px;
+}
+
+.admin-title-row h2 {
+    margin: 0;
+    color: #222;
+}
+
+.admin-badge {
+    background: #e7f5ea;
+    color: #1b7f45;
+    border: 1px solid #bfe5ca;
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+.order-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 820px;
+    background: white;
+}
+
+.order-table th,
+.order-table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+}
+
+.order-table thead th {
+    background: #2d2d2d;
+    color: white;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.order-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.order-table tbody tr:hover {
+    background: #f0f4ff;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: bold;
     text-align: center;
-    padding: 20px;
-    margin-top: auto;
+}
+
+.status-badge.new {
+    background: #fff3d6;
+    color: #a36600;
+    border: 1px solid #f0d48a;
+}
+
+.status-badge.completed {
+    background: #eafaf1;
+    color: #1d8d52;
+    border: 1px solid #bfe6c8;
+}
+
+@media (max-width: 768px) {
+    .admin-card {
+        padding: 16px;
+    }
+
+    .admin-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
